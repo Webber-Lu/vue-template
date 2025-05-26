@@ -1,14 +1,97 @@
+<!-- src/App.vue -->
 <script setup>
-import Button from "primevue/button"
+import { useRouter, useRoute } from 'vue-router'
+import { watch } from 'vue'
+
+const router = useRouter()
+const route = useRoute()
+
+// 監聽路由變化，更新頁面標題
+watch(
+  () => route.meta.title,
+  (newTitle) => {
+    if (newTitle) {
+      document.title = `${newTitle} - 我的網站`
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
-  <div>
-    <div><Button class="ml-4">Click Me</Button></div>
-    <div><Button severity="warn" class="mt-4" @click="alert('Button clicked!')">Alert</Button></div>
-    <div><Button class="mt-4">Success</Button></div>
+  <div id="app">
+    <!-- 導航欄 -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <RouterLink to="/" class="brand-link">我的網站</RouterLink>
+      </div>
+
+      <ul class="nav-menu">
+        <li>
+          <!-- RouterLink 自動添加 active class -->
+          <RouterLink to="/" class="nav-link">首頁</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about" class="nav-link">關於</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contact" class="nav-link">聯絡</RouterLink>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 路由出口：顯示匹配的組件 -->
+    <main class="main-content">
+      <RouterView />
+    </main>
   </div>
 </template>
 
 <style scoped>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.nav-brand .brand-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #34495e;
+}
+
+/* Vue Router 自動添加的活躍狀態 class */
+.nav-link.router-link-active {
+  background-color: #3498db;
+  color: white;
+}
+
+.main-content {
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
 </style>
