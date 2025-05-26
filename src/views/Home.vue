@@ -1,8 +1,4 @@
 <template>
-
-    Homepage
-</template>
-
   <div class="home-container">
     <div class="hero-section">
       <h1>Welcome to Our Vue.js Application</h1>
