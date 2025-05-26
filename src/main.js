@@ -19,3 +19,5 @@ app.use(router)
 app.use(pinia)
 
 app.mount('#app')
+
+// fixed merge conflict manually
