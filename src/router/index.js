@@ -6,7 +6,7 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Contact from '@/views/Contact.vue'
 
-<<<<<<< HEAD
+
 
 // 定義路由規則
 const routes = [
@@ -36,7 +36,7 @@ const routes = [
       title: '聯絡我們'
     }
   }
-=======
+
 // 定義路由規則
 const routes = [{
         path: '/', // 路徑
@@ -65,12 +65,12 @@ const routes = [{
             title: '聯絡我們'
         }
     }
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+
 ]
 
 // 創建路由實例
 const router = createRouter({
-<<<<<<< HEAD
+
   // 使用 HTML5 History API
   history: createWebHistory(),
   routes,
@@ -83,7 +83,7 @@ const router = createRouter({
       return { top: 0 }     // 滾動到頂部
     }
   }
-=======
+
     // 使用 HTML5 History API
     history: createWebHistory(),
     routes,
@@ -96,7 +96,7 @@ const router = createRouter({
             return { top: 0 } // 滾動到頂部
         }
     }
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+
 })
 
 export default router

@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 export const useCounterStore = defineStore('counter', () => {
-<<<<<<< HEAD
+
   // State：使用 ref 定義響應式狀態
   const count = ref(0)
   const history = ref([])
@@ -64,7 +64,7 @@ export const useCounterStore = defineStore('counter', () => {
     incrementBy,
     reset
   }
-=======
+
     // State：使用 ref 定義響應式狀態
     const count = ref(0)
     const history = ref([])
@@ -125,5 +125,5 @@ export const useCounterStore = defineStore('counter', () => {
         incrementBy,
         reset
     }
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+
 })

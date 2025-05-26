@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
     About me
     <Counter />
 </template>
@@ -7,7 +7,7 @@
 <script setup>
 import Counter from '../components/Counter.vue'
 </script>
-=======
+
   <div class="about-container">
     <div class="about-section">
       <h1>About Our Application</h1>
@@ -53,4 +53,4 @@ import Counter from '@/components/Counter.vue';
   margin-bottom: 2rem;
 }
 </style>
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+

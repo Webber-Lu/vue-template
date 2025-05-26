@@ -1,12 +1,12 @@
 <!-- src/App.vue -->
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
-<<<<<<< HEAD
+
 import { watch } from 'vue'
 =======
 import { watch, ref } from 'vue'
 import Menubar from 'primevue/menubar';
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+
 
 const router = useRouter()
 const route = useRoute()
@@ -21,7 +21,7 @@ watch(
   },
   { immediate: true }
 )
-<<<<<<< HEAD
+
 </script>
 
 <template>
@@ -45,7 +45,7 @@ watch(
         </li>
       </ul>
     </nav>
-=======
+
 
 // Menubar 項目設置
 const items = ref([
@@ -76,7 +76,7 @@ const items = ref([
         </template>
       </Menubar>
     </div>
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+
 
     <!-- 路由出口：顯示匹配的組件 -->
     <main class="main-content">
@@ -86,7 +86,7 @@ const items = ref([
 </template>
 
 <style scoped>
-<<<<<<< HEAD
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -127,7 +127,7 @@ const items = ref([
 .nav-link.router-link-active {
   background-color: #3498db;
   color: white;
-=======
+
 .brand-link {
   font-size: 1.5rem;
   font-weight: bold;
@@ -146,7 +146,7 @@ const items = ref([
 
 .mr-4 {
   margin-right: 1rem;
->>>>>>> 3a350fe089462ad99160dbc29e89dbbaa2085d77
+
 }
 
 .main-content {
