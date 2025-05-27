@@ -49,10 +49,6 @@
         <Button label="Contact" icon="pi pi-envelope" @click="navigateToContact" class="p-button-outlined" />
       </div>
     </div>
-
-    <div class="avatar-top-right">
-      <Avatar icon="pi pi-user" class="mr-2" size="xlarge" shape="circle" />
-    </div>
   </div>
 </template>
 
@@ -60,7 +56,6 @@
 import { useRouter } from 'vue-router';
 import Button from 'primevue/button';
 import Card from 'primevue/card';
-import Avatar from 'primevue/avatar';
 
 const router = useRouter();
 
@@ -151,22 +146,6 @@ const navigateToContact = () => {
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
-
-.avatar-top-right {
-  position: fixed;
-  top: 24px;
-  right: 32px;
-  z-index: 1000;
-}
-
-.avatar-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #4facfe;
-  object-fit: cover;
-  background: #fff;
 }
 
 @media (max-width: 768px) {
