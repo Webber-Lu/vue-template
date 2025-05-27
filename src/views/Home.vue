@@ -49,6 +49,11 @@
         <Button label="Contact" icon="pi pi-envelope" @click="navigateToContact" class="p-button-outlined" />
       </div>
     </div>
+
+    <div class="avatar-top-right">
+      <!-- 可替換 src 為用戶頭像網址，或用 PrimeVue Avatar -->
+      <img src="/favicon.ico" alt="User Avatar" class="avatar-img" />
+    </div>
   </div>
 </template>
 
@@ -146,6 +151,22 @@ const navigateToContact = () => {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.avatar-top-right {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 1000;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #4facfe;
+  object-fit: cover;
+  background: #fff;
 }
 
 @media (max-width: 768px) {
