@@ -51,8 +51,7 @@
     </div>
 
     <div class="avatar-top-right">
-      <!-- 可替換 src 為用戶頭像網址，或用 PrimeVue Avatar -->
-      <img src="/favicon.ico" alt="User Avatar" class="avatar-img" />
+      <Avatar icon="pi pi-user" class="mr-2" size="xlarge" shape="circle" />
     </div>
   </div>
 </template>
@@ -61,6 +60,7 @@
 import { useRouter } from 'vue-router';
 import Button from 'primevue/button';
 import Card from 'primevue/card';
+import Avatar from 'primevue/avatar';
 
 const router = useRouter();
 
