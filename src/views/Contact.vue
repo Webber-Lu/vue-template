@@ -9,7 +9,7 @@
         <p><strong>地址:</strong> 320桃園市中壢區中北路200號</p>
         <p><strong>Email:</strong> 11378033@O365st.cycu.edu.tw</p>
         <p><strong>手機:</strong> 0903580611</p>
-        <p><strong>可聯絡時間:</strong> 星期一 至 星期五, 10:00 AM - 5:00 PM</p>
+        <p><strong>可聯絡時間:</strong> 星期一 至 星期五, 10:00 AM - 10:01 AM</p>
       </div>
     </div>
 

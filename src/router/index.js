@@ -83,6 +83,12 @@ const routes = [
   path: '/posts/diary',
   name: 'DiaryPost',
   component: () => import('@/views/DiaryPost.vue')
+  },
+  {
+  path: '/posts/create',
+  name: 'PostCreate',
+  component: () => import('@/views/PostEditor.vue'),
+  meta: { title: '新增貼文' }
   }
 ]
 

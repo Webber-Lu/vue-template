@@ -1,6 +1,15 @@
 <template>
   <div class="posts-container">
-    <h1>貼文區</h1>
+    <div class="post-header">
+      <h1>貼文區</h1>
+      <Button
+        label="我要發文"
+        icon="pi pi-plus"
+        class="create-button"
+        @click="goToCreate"
+      />
+    </div>
+
     <p>這裡會展示貓咪互動社群平台的最新貼文。</p>
 
     <div class="posts-list">
@@ -28,20 +37,23 @@ import Button from 'primevue/button'
 
 const router = useRouter()
 
-// 新增 route 屬性
+// 帖文資料
 const posts = ref([
   { id: 1, title: '貓咪小知識分享', content: '分享貓咪日常照顧小技巧～', route: '/posts/knowledge' },
   { id: 2, title: '新成員報到！', content: '今天社群有 3 位新朋友加入～', route: '/posts/arrival' },
   { id: 3, title: '貓咪日記', content: '今天小花睡了一整天，超可愛！', route: '/posts/diary' }
 ])
 
-// 根據 route 導頁
 const viewDetails = (route) => {
   if (route) {
     router.push(route)
   } else {
     console.log('尚未有詳細頁面')
   }
+}
+
+const goToCreate = () => {
+  router.push('/posts/create')
 }
 </script>
 
@@ -50,6 +62,19 @@ const viewDetails = (route) => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.create-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
 }
 
 .posts-list {
