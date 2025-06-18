@@ -73,6 +73,16 @@ const routes = [
     meta: {
       title: '登入 / 註冊'
     }
+  },
+  {
+  path: '/posts/arrival',
+  name: 'ArrivalPost',
+  component: () => import('@/views/ArrivalPost.vue')
+  },
+  {
+  path: '/posts/diary',
+  name: 'DiaryPost',
+  component: () => import('@/views/DiaryPost.vue')
   }
 ]
 

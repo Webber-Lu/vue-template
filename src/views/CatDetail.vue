@@ -10,7 +10,21 @@
       <p>地點：{{ cat.location }}</p>
     </div>
 
-    <Button label="填寫表單" severity="success" @click="goToAdoptionForm" />
+    <div class="button-group">
+      <Button
+        label="返回上一頁"
+        icon="pi pi-arrow-left"
+        class="back-button"
+        @click="goBack"
+      />
+      <Button
+        label="填寫表單"
+        icon="pi pi-check"
+        severity="success"
+        class="form-button"
+        @click="goToAdoptionForm"
+      />
+    </div>
   </div>
 </template>
 
@@ -32,32 +46,32 @@ onMounted(() => {
   const catsData = [
     {
       id: 1,
-      name: '小橘',
+      name: '橘橘',
       description: '性格溫和且親人，已結紮，是可愛的母貓',
-      age: '約 2 歲',
+      age: '約 6 歲',
       gender: '母',
       personality: '溫和、親人',
-      location: '台北市動物之家',
+      location: '中壢',
       image: orangeCat
     },
     {
       id: 2,
       name: '阿灰',
       description: '活潑好動，喜歡互動',
-      age: '約 1 歲',
+      age: '約 3 歲',
       gender: '公',
       personality: '活潑、外向',
-      location: '新北市動物之家',
+      location: '中壢',
       image: grayCat
     },
     {
       id: 3,
       name: '小黑',
       description: '內向怕生，需要耐心陪伴',
-      age: '約 3 歲',
+      age: '約 2 歲',
       gender: '公',
       personality: '內向、膽小',
-      location: '桃園市動物之家',
+      location: '中壢',
       image: blackCat
     }
   ]
@@ -67,6 +81,10 @@ onMounted(() => {
 
 const goToAdoptionForm = () => {
   router.push(`/adoption/${catId}/form`)
+}
+
+const goBack = () => {
+  router.back()
 }
 </script>
 
@@ -93,6 +111,27 @@ const goToAdoptionForm = () => {
   background: #f9f9f9;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.button-group :deep(.p-button) {
+  min-width: 130px;
+}
+
+.back-button {
+  background-color: #607d8b;
+  color: white;
+  border: none;
+}
+
+.back-button:hover {
+  background-color: #455a64;
 }
 
 .dark .cat-info {

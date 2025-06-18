@@ -12,7 +12,7 @@
             label="查看詳情"
             icon="pi pi-eye"
             class="p-button-text"
-            @click="viewDetails(post.id)"
+            @click="viewDetails(post.route)"
           />
         </template>
       </Card>
@@ -28,17 +28,17 @@ import Button from 'primevue/button'
 
 const router = useRouter()
 
-// 假設有多篇文章
+// 新增 route 屬性
 const posts = ref([
-  { id: 1, title: '貓咪小知識分享', content: '分享貓咪日常照顧小技巧～' },
-  { id: 2, title: '新成員報到！', content: '今天社群有 3 位新朋友加入～' },
-  { id: 3, title: '貓咪日記', content: '今天小花睡了一整天，超可愛！' }
+  { id: 1, title: '貓咪小知識分享', content: '分享貓咪日常照顧小技巧～', route: '/posts/knowledge' },
+  { id: 2, title: '新成員報到！', content: '今天社群有 3 位新朋友加入～', route: '/posts/arrival' },
+  { id: 3, title: '貓咪日記', content: '今天小花睡了一整天，超可愛！', route: '/posts/diary' }
 ])
 
-// 查看詳情按鈕點擊
-const viewDetails = (id) => {
-  if (id === 1) {
-    router.push('/posts/knowledge')
+// 根據 route 導頁
+const viewDetails = (route) => {
+  if (route) {
+    router.push(route)
   } else {
     console.log('尚未有詳細頁面')
   }
@@ -61,5 +61,11 @@ const viewDetails = (id) => {
 
 .post-card {
   padding: 1rem;
+}
+
+/* 暗黑模式下的卡片樣式 */
+.dark .post-card {
+  background: linear-gradient(135deg, #5d5d5d, #777777);
+  color: #eee;
 }
 </style>

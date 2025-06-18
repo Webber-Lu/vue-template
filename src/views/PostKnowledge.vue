@@ -15,7 +15,7 @@
       <p>定期帶貓咪看獸醫，預防疾病。觀察牠的飲食和活動狀態，及早發現異常。</p>
     </div>
 
-    <Button label="回到貼文區" icon="pi pi-arrow-left" class="p-button-text" @click="goBack" />
+    <Button label="返回貼文區" icon="pi pi-arrow-left" @click="goBack" />
   </div>
 </template>
 

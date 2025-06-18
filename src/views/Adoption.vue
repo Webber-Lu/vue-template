@@ -12,7 +12,7 @@
           <h3>{{ cat.name }}</h3>
         </template>
         <template #content>
-          <Button label="我要認養" severity="warning" rounded @click="viewCatDetail(cat.id)" />
+          <Button label="我要認養！" severity="warning" rounded @click="viewCatDetail(cat.id)" />
         </template>
       </Card>
     </div>
@@ -30,9 +30,9 @@ import grayCat from '@/assets/images/gray-cat.jpg'   // 👈 加入灰貓
 
 const router = useRouter()
 const cats = ref([
-  { id: 1, name: '小橘', description: '? 歲，性格溫和且親人，已結紮，是可愛的母貓', image: orangeCat },
-  { id: 2, name: '阿灰', description: '1 歲，活潑好動，喜歡互動', image: grayCat },
-  { id: 3, name: '小黑', description: '3 歲，內向怕生，需要耐心陪伴', image: blackCat }
+  { id: 1, name: '橘橘', image: orangeCat },
+  { id: 2, name: '阿灰', image: grayCat },
+  { id: 3, name: '小黑', image: blackCat }
 ])
 
 const viewCatDetail = (catId) => {
@@ -91,8 +91,8 @@ const viewCatDetail = (catId) => {
 
 /* 深色模式 */
 .dark .adoption-card {
-  background-color: #7ea58a; /* 深色但柔和背景，取代黑色 */
-  color: #eee; /* 淺色文字 */
+  background: linear-gradient(135deg, #5d5d5d, #777777);
+  color: #eee;
 }
 
 .dark .adoption-card:hover {
